@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 15px;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+h1 { margin: 0 0 5px; color: #1e3c72; }
+h2 { font-size: 16px; color: #2a5298; margin: 20px 0 8px; }
+.sub { color: #666; margin-top: 0; }
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  font-family: inherit;
+}
+textarea:focus { outline: none; border-color: #2a5298; }
+
+button {
+  margin-top: 10px;
+  padding: 10px 28px;
+  font-size: 16px;
+  color: #fff;
+  background: #2a5298;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover { background: #1e3c72; }
+
+#sentenceTranslation {
+  background: #f1f5ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: left;
+}
+
+#words { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.word {
+  padding: 6px 14px;
+  background: #e8eefc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: .2s;
+}
+.word:hover, .word.active { background: #2a5298; color: #fff; }
+
+#wordBox {
+  margin-top: 18px;
+  padding: 15px;
+  background: #fffbea;
+  border-right: 4px solid #00ffdd;
+  border-radius: 10px;
+}
+#wordBox h3 { margin: 0 0 8px; }
+#wordOthers { text-align: left; margin: 0; }
+
+.error { color: #c0392b; margin-top: 15px; }
+.hidden { display: none; }
+
+/* ===== إضافات الاتجاهين ===== */
+.langs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #1e3c72;
+}
+.langs span {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  background: #e8eefc;
+  border-radius: 10px;
+}
+.swap {
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 18px;
+}
+#sentenceTranslation, #wordMain { unicode-bidi: plaintext; }
+#wordOthers { padding-inline-start: 20px; }

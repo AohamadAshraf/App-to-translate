@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>قاموس عربي ⇄ إنجليزي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>قاموس عربي ⇄ إنجليزي</h1>
+    <p class="sub">اكتب كلمة أو جملة، واضغط على أي كلمة لمعرفة معناها حسب السياق</p>
+
+    <div class="langs">
+      <span id="fromLang">العربية</span>
+      <button id="swapBtn" class="swap" title="تبديل اللغتين">⇄</button>
+      <span id="toLang">English</span>
+    </div>
+
+    <textarea id="input" rows="3" dir="auto" placeholder="اكتب هنا..."></textarea>
+    <button id="translateBtn">ترجمة</button>
+
+    <section id="result" class="hidden">
+      <h2>الترجمة</h2>
+      <p id="sentenceTranslation" dir="auto"></p>
+
+      <div id="wordsSection">
+        <h2>الكلمات (اضغط على كلمة)</h2>
+        <div id="words"></div>
+      </div>
+
+      <div id="wordBox" class="hidden">
+        <h3 id="wordTitle" dir="auto"></h3>
+        <p><strong>المعنى في السياق:</strong> <span id="wordMain" dir="auto"></span></p>
+        <p id="othersLabel"><strong>معانٍ أخرى:</strong></p>
+        <ul id="wordOthers" dir="auto"></ul>
+      </div>
+    </section>
+
+    <p id="error" class="error hidden"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
